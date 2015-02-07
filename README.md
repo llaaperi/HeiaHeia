@@ -1,2 +1,0 @@
-# HeiaHeia
-HeiaHeia statistiscs

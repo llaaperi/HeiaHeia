@@ -1,0 +1,8 @@
+warriors.txt
+*.db
+
+#heiaheia
+*.pyc
+
+#web
+node_modules
