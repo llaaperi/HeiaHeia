@@ -6,7 +6,7 @@
   "dependencies": {
     "express": "~4.0.0",
     "ejs": "~1.0.0",
-    "sequelize": "~2.0.0",
+    "sequelize": "~1.7.10",
     "sqlite3": "~2.2.7"
   },
   "devDependencies": {},

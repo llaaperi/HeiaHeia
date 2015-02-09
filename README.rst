@@ -13,3 +13,5 @@ sudo pip install .
 cd web/
 sudo npm install
 
+Tested with nodejs 0.11.13
+
