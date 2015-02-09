@@ -6,6 +6,10 @@ import os, sys
 from models import *
 from sqlalchemy.orm import sessionmaker
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 db_path = 'sqlite:///'+os.path.dirname(__file__)+'/../warrior.db'
 engine = create_engine(db_path, echo=False)
 Base.metadata.create_all(engine)
@@ -22,6 +26,7 @@ def get_warrior(name):
 
 def create_warrior(warrior):
 	'''Create warrior to the database if it does not already exist'''
+	logger.info('Create warrior '+warrior.name+' with RSS id <'+warrior.rss_id+'>')
 	warriors = get_warriors()
 	if warrior in warriors:
 		existing = get_warrior(warrior.name)

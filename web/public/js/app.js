@@ -2,4 +2,4 @@
 
 // Declare app level module which depends on filters, and services
 
-angular.module('myApp', ['chart.js', 'myApp.controllers', 'myApp.services']);
+angular.module('myApp', ['myApp.controllers', 'myApp.services']);

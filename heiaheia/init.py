@@ -5,6 +5,9 @@
 import store
 from models import Warrior
 
+import logging
+logger = logging.getLogger(__name__)
+
 def _get_warriors():
 	'''Get warriors from the warriors.txt file'''
 

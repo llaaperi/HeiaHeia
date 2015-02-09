@@ -6,8 +6,15 @@ import parser
 import store
 from models import *
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 def _update_warrior(warrior):
 	'''Update workout data for warrior'''
+	logger.info('Update warrior '+warrior.name)
+	if len(warrior.rss_id) == 0:
+		return warrior
 	url = 'https://www.heiaheia.com/users/%s/feed'%warrior.rss_id
 	workouts = parser.parse_feed(url)
 	warrior.add_workouts(workouts)
