@@ -29,6 +29,8 @@ angular.module('myApp.controllers', [])
 	};
 
 	function update_chart(){
+		$scope.data.labels = []
+		$scope.data.datasets[0].data = []
 		for (var i = 0; i < $scope.warriors.length; i++){
 			var warrior = $scope.warriors[i];
 			$scope.data.labels.push(warrior.name)
